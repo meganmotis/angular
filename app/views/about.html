@@ -1,0 +1,14 @@
+<body background-color=blue>
+      <p>This is the about view.</p>
+    <h1>Let's add some numbers!</h1>
+    <h2>MATHEMATICS</h2>
+
+    <div ng-app ng-init="firstnum=1;secondnum=2">
+      <input type="number" min="0" ng-model="firstnum">
+      plus
+      <input type="number" min="0" ng-model="secondnum">
+      equals
+      <b>{{firstnum + secondnum}}</b>
+      <span class="label label-success">{{firstnum + secondnum}}</span>
+      <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+    </div>
