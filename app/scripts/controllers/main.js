@@ -8,7 +8,7 @@
  * Controller of the angularAppApp
  */
 angular.module('angularAppApp')
-  .controller('MainCtrl', function ($scope, current, citysearch) {
+  .controller('MainCtrl', function ($scope, current, citysearch, $localStorage) {
  //  	$scope.location = 'Seattle';
  //  	$scope.current = current.get({location: $scope.location});
 
@@ -18,11 +18,12 @@ angular.module('angularAppApp')
 	// 	});
 	// };
 
-	$scope.citiesFound = citysearch.find();
+	$scope.citiesFound = citysearch.get();
+  $scope.storage = $localStorage;
 
   $scope.findCities = function(){
-        $scope.citiesFound = citysearch.find({
-            query: $scope.location
+        $scope.citiesFound = citysearch.get({
+            location: $scope.location
         });
         $scope.searchQuery = $scope.location;
 
