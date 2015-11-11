@@ -11,10 +11,12 @@ angular.module('angularAppApp')
   .controller('CurrentCtrl', function ($scope, $routeParams, current, $localStorage) {
     $scope.cityID = $routeParams.cityID;
 
-    $scope.currentWeather = current.get({
+    $scope.currentWeather = current.query({
         cityID: $routeParams.cityID
         /*cityID: 1234567 ?? */
-    });
+  //  $scope.currentWeather = current.get({
+  //		cityID: $routeParams.cityID
+});
 
     $scope.saveCity = function(city){
     var cityData = {
@@ -36,17 +38,16 @@ angular.module('angularAppApp')
         }
         if (save===true){
             $localStorage.savedCities.push(cityData);
+            $scope.citySaved = {
+  					  'success': true
+            };
         } else {
-            console.log('city already saved');
+            console.log('City already saved');
+            $scope.citySaved = {
+  					  'duplicate': true
+          };
         }
-    }
-};
+      }
+    };
 
   });
-
-//    this.awesomeThings = [
-//      'HTML5 Boilerplate',
-//      'AngularJS',
-//      'Karma'
-//    ];
-//  });

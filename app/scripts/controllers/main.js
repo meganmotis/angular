@@ -8,32 +8,32 @@
  * Controller of the angularAppApp
  */
 angular.module('angularAppApp')
-  .controller('MainCtrl', function ($scope, current, citysearch, $localStorage) {
- //  	$scope.location = 'Seattle';
- //  	$scope.current = current.get({location: $scope.location});
+  .controller('MainCtrl', function ($scope, citysearch, $localStorage) {
+    $scope.citiesFound = citysearch.find();
+    $scope.storage = $localStorage;
 
- //  	$scope.refreshCurrent = function() {
- //  		$scope.current = current.get({
-	// 		location: $scope.location
-	// 	});
-	// };
-
-	$scope.citiesFound = citysearch.get();
-  $scope.storage = $localStorage;
-
-  $scope.findCities = function(){
-        $scope.citiesFound = citysearch.get({
-            location: $scope.location
+    $scope.findCities = function(){
+        $scope.citiesFound = citysearch.find({
+            query: $scope.location
         });
         $scope.searchQuery = $scope.location;
-
     };
-
-    $scope.currentWeather = current.get({
-		cityID: 1234567
-  });
   });
 
+//  $scope.storage = $localStorage;
+
+//  $scope.findCities = function(){
+//        $scope.citiesFound = citysearch.get({
+//            location: $scope.location
+//        });
+//        $scope.searchQuery = $scope.location;
+
+//    };
+//    $scope.currentWeather = current.get({
+//		cityID: 1234567
+//  });
+
+///////////////////////////////////////////////////////////
 /**
 angular.module('angularAppApp')
   .controller('MainCtrl', function () {
