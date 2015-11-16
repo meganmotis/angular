@@ -1,0 +1,18 @@
+div[ng-view].ng-enter {
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+div[ng-view].ng-leave {
+    -webkit-animation: fadeOut 0.5s;
+    animation: fadeOut 0.5s;
+}
+
+/*Hypothetical example prob found in index.html and css-->
+<div ng-view>
+    <!-- This is where the view partial would be inserted -->
+</div>
+
+div[ng-view].ng-enter {
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}*/
