@@ -17,7 +17,7 @@ angular.module('angularAppApp')
       find: {
         method: 'GET',
         params: {
-          query: 'seattle'
+          query: ''
         },
         isArray: false
       }

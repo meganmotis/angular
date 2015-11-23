@@ -1,4 +1,4 @@
-
+// Service is used to grab API data
 'use strict';
 
 /**

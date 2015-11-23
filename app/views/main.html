@@ -1,17 +1,56 @@
-<header><h1>Can I wear shorts today?</h1></header>
-    <div class="summary">
-      <p class="lead"></p>
-        <div ng-init="location='Seattle'">
-            <p>
-              <label for="location">
-                <input type="text" name="location" ng-model="location">
-              </label>
-            </p>
-            <p>
-            <button class="btn btn-lg btn-primary" ng-click="findCities()">Find City</button>
-            </p>
-          </div> <!--ng int-->
-          <div ng-if="searchQuery">
+<!-- <html>
+<body> -->
+
+  <div> <!--ng-app directive defines an AngularJS application-->
+  	<h1>Can I wear shorts today?</h1>
+    <div class="left-half" >
+      <img ng-src="{{myPicture}}" width='620' height='auto'/>
+    </div>
+  </div>
+
+
+  <div class="right-half">
+      <h3>Weather for: {{current.name}}</h3>
+    <p class="lead"></p>
+      <div ng-init="location='Seattle'">
+          <p>
+            <label for="location">
+              <!--ng-model directive binds the value of HTML controls (input, select, textarea) to application data.-->
+              <input type="text" name="location" ng-model="location">
+            </label>
+            <button class="btn btn-lg btn-primary" id="button" ng-click="searchQuery()">Find City</button>
+          </p>
+          <!-- <div ng-if="searchQuery"> -->
+             <!-- <p class="lead">{{citiesFound.count}} cities found matching the query: {{searchQuery}}.</p> -->
+        <div class="row">
+          <div class="col-md-6">
+          <dl class="city-listing" ng-repeat="city in citiesFound.list">
+            <dt>Temperature</dt>
+            <dd>{{city.main.temp}} &deg;C</dd>
+            <dt>Current Weather</dt>
+            <dd>{{city.weather[0].main}}</dd>
+            <dt>Clouds</dt>
+            <dd>{{city.clouds.all}} %</dd>
+            <dt>Precipitation</dt>
+            <dd>{{city.main.humidity}}</dd>
+            <dt>Country</dt>
+            <dd>{{city.sys.country}}</dd>
+              <button ng-click="showOutfit(city.main.temp, city.main.humidity)" class="btn btn-lg btn-primary">Find Outfit</button>
+            </dl>
+          </div>
+          <div class="col-md-6">
+            <div ng-if="storage.recentSearches" ng-repeat = "city in storage.recentSearches">
+              {{city}}
+
+            </div>
+          </div>
+
+          </div>
+  </div> <!--ng int-->
+</div> <!--right half -->
+<!-- </body>
+</html> -->
+          <!-- <div ng-if="searchQuery">
              <p class="lead">{{citiesFound.count}} cities found matching the query: {{searchQuery}}.</p>
              <dl class="city-listing" ng-repeat="city in citiesFound.list">
                <dt>{{city.name}}, {{city.sys.country}}</dt>
@@ -36,4 +75,4 @@
    </div>
 </div>
 <footer>
-</footer>
+</footer> -->

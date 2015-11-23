@@ -2,8 +2,6 @@
 <div ng-if="forecastData">
 <h1>Dress yourself, Ninja!</h1>
 <img src="images/Eli.jpg" alt="Eli shorts" style="width:650px;height:auto">
-
-
 <!--<dl ng-repeat="prediction in forecastData.list" class="weather-forecast">
     <dt>Forecast for {{weather.dt*1000 | date:'MMM dd, yyyy'}}</dt>
     <dd>{{prediction.weather[0].main}}</dd>
@@ -11,7 +9,6 @@
     <dt>Temperature</dt>
     <dd>Min: {{prediction.temp.min}} &deg;C Max: {{prediction.temp.max}} &deg;C</dd>
 </dl>-->
-
 <div id="box">
   <p class="instruct"<a href="#">Wear shorts</a></p>
 </div>
@@ -29,3 +26,4 @@
     <li><img src="images/verycold.jpg" alt="verycold" width="auto" height="400" class="verycold" id="img-circle"></li><br>
     <li><video width="300" controls><source src="images/rainyseattle.mov" alt="rainyseattle" width="auto" height="400" class="rainyseattle" id="img-circle"></video></li>
   </ul>-->
+<div class="rainy" ng-if="forecastData"></div>

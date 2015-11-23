@@ -8,10 +8,9 @@
  * Controller of the angularAppApp
  */
 angular.module('angularAppApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('AboutCtrl', function ($scope) {
+    $scope.citiesFound = []
+
+    $scope.location = ""
+
   });
