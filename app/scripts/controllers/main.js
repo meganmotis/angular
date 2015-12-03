@@ -28,7 +28,7 @@ angular.module('angularAppApp')
         // console.log($scope.citiesFound);
     };
     $scope.showOutfit = function(temperature, humidity){
-      if (humidity >= 73) {
+      if (humidity >= 76) {
         $scope.myPicture="images/rainy.jpg";
         // show picture of rain contact
       }
@@ -38,20 +38,24 @@ angular.module('angularAppApp')
           // very hot summer picture
           $scope.myPicture = "images/veryhot.jpg";
         }
-        if (temperature >20 && temperature <=25) {
+        if (temperature >22 && temperature <=25) {
+          // warm weather
+          $scope.myPicture="images/sunny.jpg";
+        }
+        if (temperature >18 && temperature <=22) {
           // warm weather
           $scope.myPicture="images/Eli.jpg";
         }
-        if (temperature >15 && temperature <=20) {
+        if (temperature >14 && temperature <=18) {
           // chilly
           $scope.myPicture="images/chilly.jpg";
         }
-        if (temperature >10 && temperature <=15) {
+        if (temperature >11 && temperature <=14) {
           // chilly
           $scope.myPicture="images/cool.jpg";
         }
-        if (temperature >5 && temperature <=10) {
-          // chilly
+        if (temperature >5 && temperature <=11) {
+          // fall leaves -- jackets
           $scope.myPicture="images/fall_leaves.jpg";
         }
         if (temperature >0 && temperature <=5) {

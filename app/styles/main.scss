@@ -55,6 +55,7 @@ h1 {
   letter-spacing: 6px;
 	color: gold;
 	font-weight: bold;
+  text-shadow: 2px 2px 5px black;
   @include transition(color .3s ease, font-size .6s ease);
   &:hover {
     color: violet;
@@ -69,6 +70,7 @@ h1 {
       padding-bottom: 20px;
       padding-top: 0;
       margin-top: 0px;
+      text-shadow: 2px 2px 5px black;
   }
 
 // input {
@@ -101,7 +103,9 @@ label {
   background-color: #ff9e2c;
   font: 1.3em courier;
 }
-
+.col-md-6 {
+  width: 50%;
+}
 // #home-button {
 //   margin-bottom: 10px;
 //   margin-left: 125px;
