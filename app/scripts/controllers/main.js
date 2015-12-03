@@ -34,7 +34,7 @@ angular.module('angularAppApp')
       }
       else {
         if (temperature > 25) {
-          // console.log("veryhot");
+          console.log("YES! It's very hot!");
           // very hot summer picture
           $scope.myPicture = "images/veryhot.jpg";
         }
