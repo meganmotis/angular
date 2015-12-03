@@ -3,14 +3,16 @@
 
   <div> <!--ng-app directive defines an AngularJS application-->
   	<h1>Can I wear shorts today?</h1>
+    <h2>Find clothing solutions depending on the weather.</h2>
     <div class="left-half" >
-      <img ng-src="{{myPicture}}" width='620' height='auto'/>
+      <img ng-src="{{myPicture}}" class="ninja" width='600' height='545'/>
     </div>
   </div>
 
 
   <div class="right-half">
-      <h3>Weather for: {{current.name}}</h3>
+      <!-- <h3>Weather for: {{current.name}}</h3> -->
+      <h3>Search by city and 2-letter State or Country</h3>
     <p class="lead"></p>
       <div ng-init="location='Seattle'">
           <p>
@@ -25,6 +27,7 @@
         <div class="row">
           <div class="col-md-6">
           <dl class="city-listing" ng-repeat="city in citiesFound.list">
+            <dd>{{city.name}}<dd>
             <dt>Temperature</dt>
             <dd>{{city.main.temp}} &deg;C</dd>
             <dt>Current Weather</dt>
@@ -32,15 +35,15 @@
             <dt>Clouds</dt>
             <dd>{{city.clouds.all}} %</dd>
             <dt>Precipitation</dt>
-            <dd>{{city.main.humidity}}</dd>
+            <dd>{{city.main.humidity}} %</dd>
             <dt>Country</dt>
             <dd>{{city.sys.country}}</dd>
-              <button ng-click="showOutfit(city.main.temp, city.main.humidity)" class="btn btn-lg btn-primary">Find Outfit</button>
+              <button ng-click="showOutfit(city.main.temp, city.main.humidity)" id="button" class="btn btn-lg btn-primary">Find Outfit</button>
             </dl>
           </div>
           <div class="col-md-6">
             <div ng-if="storage.recentSearches" ng-repeat = "city in storage.recentSearches">
-              {{city}}
+            {{city}}
 
             </div>
           </div>
