@@ -1,7 +1,7 @@
 .left-half {
   background-color: purple;
   padding: 0px;
-  border: 2px 1px 2px 2px solid white;
+  border: 2px 1px 2px 2px solid orange;
   margin: 2px;
 }
 
@@ -23,6 +23,10 @@
   margin: 0;
   padding: 0 8px 0 6px;
   float: left;
+}
+
+h1 {
+  font: 1em;
 }
 
 .container {
