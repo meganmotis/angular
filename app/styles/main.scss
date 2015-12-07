@@ -114,50 +114,50 @@ label {
   font: fantasy;
 }
 
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: 900px) {
 
-// /*Responsive*/
-//  .left-half {
-//  background-color: purple;
-//  padding: 0px;
-//  border: 2px 1px 2px 2px solid orange;
-//  margin: 2px;
-//  }
-//
-//  .right-half {
-//   /*background-color: #b6701e;*/
-//   background-color: purple;
-//   position: absolute;
-//   float: right;
-//   right: 0px;
-//   width: 50%;
-//   height: 95%;
-//   padding: 10px;
-//   margin: 0px;
-//   border: 2px 2px 2px 1px solid orange;
-//  }
-//  .ninja {
-//   width: 200px;
-//   height: auto;
-//   margin: 0;
-//   padding: 0 8px 0 6px;
-//   float: left;
-//  }
-//
-//  h1 {
-//    font: 1em;
-//    font-style: fantasy;
-//  }
-//
-//  .container {
-//    background-color: violet;
-//  }
-//
-//  .displayText {
-//    margin: 28px 0 20px 0;
-//
-//  }
-//
-//  label {
-//    color: purples; /* makes the text-black */;
-//    font-size: 1.2em;
-//  }
+ .left-half {
+ background-color: purple;
+ padding: 0px;
+ margin: 2px;
+ }
+
+ .right-half {
+  /*background-color: #b6701e;*/
+  background-color: purple;
+  position: absolute;
+  float: right;
+  right: 0px;
+  width: 50%;
+  height: 95%;
+  padding: 10px;
+  margin: 0px;
+ }
+ .ninja {
+  width: 200px;
+  height: auto;
+  margin: 0;
+  padding: 0 8px 0 6px;
+  float: left;
+ }
+
+ h1 {
+   font: 1em;
+   font-style: fantasy;
+ }
+
+ .container {
+   background-color: violet;
+ }
+
+ .displayText {
+   margin: 28px 0 20px 0;
+
+ }
+
+ label {
+   color: purples; /* makes the text-black */;
+   font-size: 1.2em;
+ }
+ }
