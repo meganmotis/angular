@@ -3,8 +3,11 @@
 
   <div> <!--ng-app directive defines an AngularJS application-->
   	<h1>Can I wear shorts today?</h1>
-    <h2>Helping kids find clothing solutions so they can dress themselves</h2>
+    <h2>Helping kids find weather-dependant clothing solutions <br> so they can dress themselves</h2>
     <div class="left-half" >
+      <div ng-app="">
+        <p class="displayText">{{displayText}}</p>
+    </div>
       <img ng-src="{{myPicture}}" class="ninja" width='600' height='600'/>
     </div>
   </div>
@@ -18,7 +21,7 @@
           <p>
             <label for="location">
               <!--ng-model directive binds the value of HTML controls (input, select, textarea) to application data.-->
-              <input type="text" name="location" ng-model="location">
+              <input type="text" name="location" ng-model="location" class="city_name">
             </label>
             <button class="btn btn-lg btn-primary" id="button" ng-click="searchQuery()">Find City</button>
           </p>
@@ -30,11 +33,13 @@
             <dd>{{city.name}}<dd>
             <dt>Temperature</dt>
             <dd>{{city.main.temp}} &deg;C</dd>
+            <dt>Description</dt>
+            <dd>{{city.weather[0].description}}</dd>
             <dt>Current Weather</dt>
             <dd>{{city.weather[0].main}}</dd>
             <dt>Clouds</dt>
             <dd>{{city.clouds.all}} %</dd>
-            <dt>Precipitation</dt>
+            <dt>Humidity</dt>
             <dd>{{city.main.humidity}} %</dd>
             <dt>Country</dt>
             <dd>{{city.sys.country}}</dd>
@@ -44,7 +49,6 @@
           <div class="col-md-6">
             <div ng-if="storage.recentSearches" ng-repeat = "city in storage.recentSearches">
             {{city}}
-
             </div>
           </div>
 
@@ -53,29 +57,3 @@
 </div> <!--right half -->
 <!-- </body>
 </html> -->
-          <!-- <div ng-if="searchQuery">
-             <p class="lead">{{citiesFound.count}} cities found matching the query: {{searchQuery}}.</p>
-             <dl class="city-listing" ng-repeat="city in citiesFound.list">
-               <dt>{{city.name}}, {{city.sys.country}}</dt>
-               <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
-               <dt>Temperature</dt>
-               <dd>{{city.main.temp}} &deg;C</dd>
-               <dd><a ng-href="#/forecast/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
-             </dl>
-           </div>
-         </p>
-       </div>
-       <div ng-if="storage.savedCities">
-        <h2>Saved Cities</h2>
-          <ul class="saved-cities-list">
-            <li ng-repeat="city in storage.savedCities">
-              <a ng-href="#/forecast/{{city.id}}" class="btn btn-lg btn-primary">{{city.name}}</a>
-            </li>
-          </ul>
-       </div>
-       </div>
-     </div>
-   </div>
-</div>
-<footer>
-</footer> -->

@@ -17,6 +17,14 @@ body {
   background-color: purple;
 }
 
+.displayText {
+  font-family: fantasy;
+  color: gold;
+  font-size: 2.3em;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+
+}
 .container {
   display: table;
   width: 100%;
@@ -24,7 +32,8 @@ body {
 }
 
 .left-half {
-  background-color: #ff9e2c;
+  // background-color: #f09214;
+  background-color: #EF9F26;
   position: absolute;
   float: left;
   left: 0px;
@@ -72,66 +81,35 @@ h1 {
       margin-top: 0px;
       text-shadow: 2px 2px 5px black;
   }
-
-// input {
-//   height: 40px;
-//   width: 200px;
-//   margin-left: 240px;
-// }
-
+.city_name {
+  font-family: courier;
+  padding: 0;
+  margin: 0;
+}
 
 h3 {
-  font: 1.5em fantasy;
+  font: 1.8em fantasy;
   color: gold;
-  // letter-spacing: .05px;
   text-align: left;
   padding-top: 0;
   padding-bottom: 0;
-  // @include transition(color .3s ease, font-size .6s ease);
-  // &:hover {
-  //   color: gold;
-  //   font-size: 2.3em;
-  // }
+  text-shadow: 2px 2px 2px black;
 }
 
 label {
   color: #000; /* makes the text-black */;
-  font: 1.75em sans-serif;
+  font-size: 2.0em;
 }
+
 #button {
-  background-color: #e6ac00;
-  background-color: #ff9e2c;
+  // background-color: #e6ac00;
+  // background-color: #ff9e2c;
+  background-color: violet;
   font: 1.3em courier;
+  text-shadow: 2px 2px 2px black;
+
 }
 .col-md-6 {
-  width: 50%;
+  width: 90%;
+  font: fantasy;
 }
-// #home-button {
-//   margin-bottom: 10px;
-//   margin-left: 125px;
-//   width: 105px;
-//   height: 60px;
-//   font: 2em fantasy;
-// }
-
-// #scrollArea {
-//   height: 280px;
-//   overflow: auto;
-// }
-// [role=contentinfo] {
-// 	background: violet;
-// 	font: 2.5em fantasy;
-// 	letter-spacing: 2px;
-// 	position: absolute;
-// 	// right: 0;
-// 	padding: 50px;
-// 	width: 600px;
-// 	border-radius: 25px;
-//   margin-left: 50px;
-// 	transition: 2s width;
-//   font-color: orange;
-// }
-//
-// [role=contentinfo]:hover {
-// 	width: 480px;
-// }

@@ -12,6 +12,7 @@ angular.module('angularAppApp')
 
     $scope.location = "";
     $scope.myPicture = "images/ninja.jpg";
+    $scope.displayText = "Hello there, little Ninja!";
     $scope.storage = $localStorage;
     $localStorage.recentSearches = [];
 
@@ -28,61 +29,57 @@ angular.module('angularAppApp')
         // console.log($scope.citiesFound);
     };
     $scope.showOutfit = function(temperature, humidity){
-      if (humidity >= 76) {
+      if (humidity >= 94) {
+        console.log("It's raining, wear a raincoat.");
         $scope.myPicture="images/rainy.jpg";
-        // show picture of rain contact
+        $scope.displayText = "Um...your legs might get wet!";
+        // show picture of rain coat
       }
       else {
-        if (temperature > 25) {
-          console.log("YES! It's very hot!");
+        if (temperature > 28) {
+          // console.log("YES! It's very hot, wear shorts.");
           // very hot summer picture
           $scope.myPicture = "images/veryhot.jpg";
+          $scope.displayText = "Yes, that or a bathing suit!";
         }
-        if (temperature >22 && temperature <=25) {
+        if (temperature >22 && temperature <=28) {
           // warm weather
           $scope.myPicture="images/sunny.jpg";
+          $scope.displayText="Yes, wear shorts!";
+
         }
         if (temperature >18 && temperature <=22) {
           // warm weather
           $scope.myPicture="images/Eli.jpg";
+        $scope.displayText="Yes! That's a great idea!";
+
         }
         if (temperature >14 && temperature <=18) {
           // chilly
           $scope.myPicture="images/chilly.jpg";
+          $scope.displayText="It's a bit cold, but it's up to you!"
         }
         if (temperature >11 && temperature <=14) {
           // chilly
           $scope.myPicture="images/cool.jpg";
+          $scope.displayText="Sorry, little ninja, no shorts today!"
         }
         if (temperature >5 && temperature <=11) {
           // fall leaves -- jackets
           $scope.myPicture="images/fall_leaves.jpg";
+          $scope.displayText="Nope, not today!"
         }
         if (temperature >0 && temperature <=5) {
           // chilly
           $scope.myPicture="images/cold.jpg";
+          $scope.displayText="It's winter. Ask me in 3 months!"
         }
         if (temperature <=0) {
           // very cold
           $scope.myPicture="images/verycold.jpg";
+          $scope.displayText="No way! It's freezing!"
         }
       };
 
-
     };
   });
-
-
-
-
-///////////////////////////////////////////////////////////
-/**
-angular.module('angularAppApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
-*/
