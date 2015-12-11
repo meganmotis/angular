@@ -42,34 +42,39 @@ angular.module('angularAppApp')
           $scope.myPicture = "images/veryhot.jpg";
           $scope.displayText = "Yes, that or a bathing suit!";
         }
-        if (temperature >22 && temperature <=28) {
+        if (temperature >24 && temperature <=28) {
           // warm weather
           $scope.myPicture="images/sunny.jpg";
           $scope.displayText="Yes, wear shorts!";
 
         }
-        if (temperature >18 && temperature <=22) {
+        if (temperature >20 && temperature <=24) {
           // warm weather
           $scope.myPicture="images/Eli.jpg";
         $scope.displayText="Yes! That's a great idea!";
+        }
+        if (temperature >16 && temperature <=20) {
+          // warm weather
+          $scope.myPicture="images/eli_and_ruth.jpg";
+        $scope.displayText="If you want to you can!";
 
         }
-        if (temperature >14 && temperature <=18) {
+        if (temperature >13 && temperature <=16) {
           // chilly
           $scope.myPicture="images/chilly.jpg";
-          $scope.displayText="It's a bit cold, but it's up to you!"
+          $scope.displayText="It's a bit chilly, but it's up to you!"
         }
-        if (temperature >11 && temperature <=14) {
+        if (temperature >10 && temperature <=13) {
           // chilly
           $scope.myPicture="images/cool.jpg";
           $scope.displayText="Sorry, little ninja, no shorts today!"
         }
-        if (temperature >5 && temperature <=11) {
+        if (temperature >4 && temperature <=10) {
           // fall leaves -- jackets
           $scope.myPicture="images/fall_leaves.jpg";
           $scope.displayText="Nope, not today!"
         }
-        if (temperature >0 && temperature <=5) {
+        if (temperature >0 && temperature <=4) {
           // chilly
           $scope.myPicture="images/cold.jpg";
           $scope.displayText="It's winter. Ask me in 3 months!"
